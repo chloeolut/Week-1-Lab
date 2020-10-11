@@ -35,7 +35,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // view is the View (Button, ExitText, TextView, etc) that was clicked
 
         // if it was the btnGetForecast
-        if (view.getId() == R.id.btnGetForecast){
+        if (view.getId() == R.id.btnGetForecast) {
+            //Get the text entered by the user in the etLocationInput
+            EditText editText = findViewById(R.id.etLocationInput);
+            String enteredLocation = String.valueOf(editText.getText());
+
+            //remove all whitespaces entered by the user
+            String strippedEnteredLocation = enteredLocation.replaceAll("\\s", "");
+            //Assuming the user hasn't entered anything just yet.
+            String msg = getString(R.string.tvLocationDisplayError);
+            //check if any text was entered first.
+            if (strippedEnteredLocation.length() > 0) {
+                msg = getString(R.string.tvLocationDisplay, enteredLocation);
+            }
+                    //append it to the text in the tvLocationDisplay
+                    TextView locationDisplay = findViewById(R.id.tvLocationDisplay);
+                    locationDisplay.setText(msg);
+                }
+            }
         }
-    }
-}
+

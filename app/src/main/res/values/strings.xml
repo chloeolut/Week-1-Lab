@@ -2,6 +2,8 @@
     <string name="app_name">Rgu Weather</string>
     <string name="tvTitle">Home</string>
 
+    <string name="tvLocationDisplay"> The weather in %1$s is </string>
+    <string name="tvLocationDisplayError">Please enter a location</string>
 
 
     <!-- for the RandomWeatherForecastGetter -->

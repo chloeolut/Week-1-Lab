@@ -36,6 +36,6 @@
         android:id="@+id/tvLocationDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The weather in " />
+        android:text="The weather in Hjorring is" />
 
 </LinearLayout>
